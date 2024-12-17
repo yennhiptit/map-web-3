@@ -6,7 +6,7 @@
     <title>Leaflet Map with GeoJSON</title>
     <!-- Thêm Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
+        <style>
         #map {
             height: 800px;
             width: 100%;
@@ -14,39 +14,8 @@
     </style>
 </head>
 <body>
-<div id="map"></div>
 
-<!-- Thêm Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-<script>
-    // Khởi tạo bản đồ Leaflet
-    var map = L.map('map').setView([20.99664, 105.79619], 12);
-
-    // Thêm tile layer (bản đồ nền)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // URL chứa dữ liệu GeoJSON
-    var geojsonUrl = 'https://raw.githubusercontent.com/yennhiptit/map-web-data-api/refs/heads/main/map%20(4).json';
-
-    // Dùng Fetch API để tải GeoJSON
-    fetch(geojsonUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Thêm GeoJSON vào bản đồ
-            L.geoJSON(data).addTo(map);
-        })
-        .catch(error => {
-            console.error('Error fetching GeoJSON:', error);
-        });
-</script>
+    <img src="KBthuphi50.png" alt="KBcoso" style="zoom:100%"> 
 
 </body>
 </html>
